@@ -1,0 +1,26 @@
+名称：Android CI
+
+在：
+  推：
+    分支: [    分支：[ “主” ] “master”   ]
+  拉请求：
+    分支: [    分支：[ “主” ] “master”    ]
+
+工作：
+  建造者：
+
+    running-on   :     运行：ubuntu-latest
+
+    脚步：
+    -使用:        - 使用：actions/checkout@v3
+    - name   :        - 名称：设置 JDK 11
+      使用： 使用：actions/setup-java@v3
+      和：
+        java 版本：'11'
+        分布：《铁木林》
+        存储： 存储：gradle
+
+    - name     :          - name :授予gradlew执行权限
+      run     :       运行：chmod +x gradlew
+    -姓名   :        - 名称：使用 Gradle 构建
+      跑步 :       运行：./gradlew 构建
